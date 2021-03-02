@@ -1,7 +1,7 @@
 from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Sequence
 from uuid import UUID
 
-from readerwriterlock.rwlock import RWLockFair
+from eventsourcing.utils.readerwriterlock.rwlock import RWLockFair
 
 from eventsourcing.exceptions import RecordConflictError
 from eventsourcing.infrastructure.base import RecordManagerWithTracking, TrackingKwargs
