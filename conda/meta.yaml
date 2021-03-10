@@ -1,5 +1,5 @@
-{% set name = "ScaffoldGraph" %}
-{% set version = "1.1.5" %}
+{% set name = "eventsourcing" %}
+{% set version = "8.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -38,5 +38,6 @@ about:
   description: |
     Eventsourcing is an open-source event store, built using object and time-series storage driver,
     for the generation and analysis of transactions into is-flow or ought-flow.
-  doc_url: https://github.com/UCLCheminformatics/ScaffoldGraph
-  dev_url: https://github.com/UCLCheminformatics/ScaffoldGraph
+  doc_url: https://github.com/trumanw/eventsourcing
+  dev_url: https://github.com/trumanw/eventsourcing
+  
