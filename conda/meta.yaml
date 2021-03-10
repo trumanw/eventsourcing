@@ -1,0 +1,43 @@
+{% set name = "eventsourcing" %}
+{% set version = "8.2.4" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  # sha256: bb8577f22f92cab13a760c1087a79c7eaf543b6ea2b1fe77c7c778976d0cc333
+  # execute `conda build .` in the 
+  path: ../.
+
+build:
+  noarch: python
+  number: 0
+  skip: True  # [py<35]
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  build:
+    - python
+    - pip
+    - pytest-runner
+  run:
+    - python
+    - typing_extensions
+    - python-dateutil
+    - pycryptodome
+    - requests
+
+about:
+  home: https://github.com/trumanw/eventsourcing
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: 'A library for event sourcing in Python.'
+  description: |
+    Eventsourcing is an open-source event store, built using object and time-series storage driver,
+    for the generation and analysis of transactions into is-flow or ought-flow.
+  doc_url: https://github.com/trumanw/eventsourcing
+  dev_url: https://github.com/trumanw/eventsourcing
+  
